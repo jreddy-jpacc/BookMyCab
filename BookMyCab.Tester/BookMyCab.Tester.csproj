@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.3\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,11 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BookMyCab.AZStorageService\BookMyCab.AZStorageService.csproj">
-      <Project>{96B248E0-E094-43E1-9AF0-C946112F311D}</Project>
-      <Name>BookMyCab.AZStorageService</Name>
+    <ProjectReference Include="..\BookMyCab.WebAPI\BookMyCab.WebAPI.csproj">
+      <Project>{fd7eecab-31b9-4b3b-8420-b0003909b9cd}</Project>
+      <Name>BookMyCab.WebAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookMyCab.WebJobAuto\BookMyCab.WebJobAuto.csproj">
+      <Project>{f4ea58d3-e2ec-434c-81d4-1ec2570e8664}</Project>
+      <Name>BookMyCab.WebJobAuto</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

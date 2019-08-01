@@ -1,9 +1,9 @@
-﻿using BookMyCab.AZStorageService;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BookMyCab.WebJobAuto;
 
 namespace BookMyCab.Tester
 {
@@ -52,10 +52,10 @@ namespace BookMyCab.Tester
 
                 //Console.WriteLine("----Storage Account Methods -----END------");
                 #endregion
-
-                #region service bus Test
-                Console.WriteLine("--------Service Bus Test------");
-                #endregion
+                //WebJobAuto.Functions.ProcessData();
+                //Console.ReadLine();
+                
+             
             }
             catch (Exception ex)
             {
